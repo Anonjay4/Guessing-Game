@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            padding: 35vh 0;
+        }
+    </style>
+</head>
+<body class="bg-dark d-flex align-items-center justify-content-center">
+    <div class="d-flex flex-column w-100 justify-content-center align-items-center">
+        <p class="fs-1 my-0 text-white" id="ShowR"> <b>Generate A Random Number Between 0-100</b></p>
+        <button class="btn btn-primary p-4 fs-2" onclick="myfunction()">Generate Number</button>
+        <p class="fs-1 my-0 text-white" id="ShowT"><b></b></p>
+    </div>
+</body>
+
+</html>
+<script>
+function myfunction() {
+    document.getElementById ('ShowT') .innerHTML = Math.ceil(Math.random() * 100);
+    // document.getElementById ("ShowR") .style.display = "none";
+}
+let class1 = 'javascript'
+console.log(class1[6]);
+
+let numOne = 3
+let numTwo = '3'
+
+console.log(numOne === numTwo);
+
+
+console.log(Math.PI);
+console.log(Math.min(45, 5, -3, 56, 100));
+maximumNum = Math.max(45, 5, -3, 56, 100)
+console.log(maximumNum);
+
+let randomNum = Math.random()
+console.log(randomNum);
+
+const num = Math.floor(Math.random () * 101)
+console.log(num)
+
+const num1 = Math.ceil(Math.random () * 100)
+console.log(num1)
+
+let name1 = "Tema's"
+let name2 = 'Ayo'
+let name3 = ' Godwin'
+
+console.log(name1 + name2 + name3);
+console.log(`${name1} + 'friend has money'`);
+
+let a = '56'
+let b = 43
+
+console.log(`The sum of ${a} and ${b} is ${parseInt(a) + b}`)
+let mystring = "The sum of " + a + " and " + b + " is " + (parseInt(a) + b)
+
+console.log(mystring.length);
+mystring = mystring.toUpperCase()
+console.log(mystring);
+
+
+let word = 'javascript'
+
+
+console.log(word.substr(6 , 1));
+console.log(word.substring(4 , 10 ));
+console.log(word.slice(4 , 10 ));
+
+let string = '30+Days+Of+JavaScript'
+
+console.log(string.split('+'));
+
+console.log(word.toUpperCase().toLowerCase().split('').slice(4, 10));
+
+string = string.replaceAll('+' , ' ').replace('Days', 'Months')
+console.log(string);
+
+
+console.log(string.charAt(17));
+console.log(string.charCodeAt(14));
+console.log(string.indexOf('Java'));
+
+console.log(word.concat(string, ', hello from js', ' another thing'));
+console.log(string.match('Months'))
+
+// let myPrompt = prompt('enter your name' , '')
+
+// if (myPrompt.trim() !== '') {
+//     alert('Hi' + " " + myPrompt)
+// } else{
+//     alert('Please provide a name')
+// }
+
+
+// let yourPrompt = prompt ('enter your age', '')
+
+// if (yourPrompt.trim().toUpperCase() === ''){
+//     alert('Enter a value')
+// } else {
+//     alert('Age taken successfully')
+// }
+
+// const agree = confirm('Are you sure you like to delete? ')
+// console.log(agree)
+
+
+// letsqiLightOn = true
+// if(sqiLightOn) {
+//     console.log('the light is on');
+// }
+
+
+let one = 1
+let two = 2
+
+// if (one > two) {
+//     alert(one + ' ' + 'is the greater value')
+// }
+// else if(one < two){
+//     alert (two + ' ' + 'is the greater value')
+// }
+// else{
+//     alert(one = ' ' + 'is equal to' + ' ' + two)
+// }
+// if (two > one) {
+//     console.log('two is bigger');
+// }
+
+
+// let confirmValue = confirm('are you sure')
+
+// if (confirmValue) {
+//     alert('name deleted')
+// } else{
+//     alert ("couldn't delete at the moment")
+// }
+
+let value = ''
+
+switch (true) {
+    case one > two:
+        console.log(one + ' ' + 'is the greater value');
+        break;
+    case one < two:
+        console.log(two + ' ' + 'is the greater value');
+        break;    
+
+    default:
+        console.log(one = ' ' + 'is equal to' + ' ' + two);
+        break;
+}
+
+
+one > two
+? console.log('one is greater than two')
+: console.log('two is greater than one');
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
