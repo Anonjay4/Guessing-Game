@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+
+// let arr = new Array()
+// let obj = {
+//     name1: 'Victor',
+//     name2: 'Tema',
+//     name3: 'Bosun',
+//     num: [ 1, 2, 3, 4, 5],
+//     friends: { class1: ['david', 'daniel'] , class2: { name: 'tolu', name3: 'tola'}}
+// }
+// console.log(obj);
+
+
+// console.log(obj.name3);
+// console.log(obj['name2']);
+// console.log(obj.num[3]);
+// console.log(obj.friends.class1[1]);
+// console.log(obj.friends.class2.name3);
+
+
+
+// let myObj = {
+//     name: 'shallom',
+
+//     class: 'js',
+
+//     sayName: function () {
+//         console.log(`my name is ${this.name}`);
+//     }
+
+// }
+
+// myObj.sayName = function () {
+//     console.log(`I am jumping ${this.class}`);    
+// }
+
+// myObj.class = 'wisdom'
+
+// console.log(myObj.name);
+// myObj.sayName()
+// myObj.jump()
+// console.log(myObj.caller);
+// console.log(myObj);
+
+// const objCopy = Object.assign({}, myObj)
+
+// let arr1 = [1, 2, 3, 4]
+// let arr2 = [1, 2, 3, 4]
+
+// console.log(objCopy);
+// let objKeys = Object.keys(myObj)
+// let objValues = Object.values(myObj)
+// let objEntries = Object.entries(myObj)
+// console.log(objKeys);
+// console.log(objValues);
+// console.log(objEntries);
+
+
+// for (const num of arr2) {
+//     console.log(num);
+// }
+
+
+// for (const key in myObj) {
+//     console.log(` key:${key}  , value:  ${myObj[key]}`);
+// }
+
+
+// console.log(myObj.hasOwnProperty('sayName'));
+
+const users = {
+  Alex: {
+    email: 'alex@alex.com',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    age: 20,
+    isLoggedIn: false,
+    points: 30
+  },
+  Asab: {
+    email: 'asab@asab.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+    age: 25,
+    isLoggedIn: false,
+    points: 50
+  },
+  Brook: {
+    email: 'daniel@daniel.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+    age: 30,
+    isLoggedIn: true,
+    points: 50
+  },
+  Daniel: {
+    email: 'daniel@alex.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+    age: 20,
+    isLoggedIn: false,
+    points: 40
+  },
+  John: {
+    email: 'john@john.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+    age: 20,
+    isLoggedIn: true,
+    points: 50
+  },
+  Thomas: {
+    email: 'thomas@thomas.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+    age: 20,
+    isLoggedIn: false,
+    points: 40
+  },
+  Paul: {
+    email: 'paul@paul.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+    age: 20,
+    isLoggedIn: false,
+    points: 40
+  }
+}
+
+let loggedInCount = 0;
+let points = 0;
+let pointUsers = [];
+let loggedInUsers = [];
+
+for (const user in users) {
+  if (users[user].isLoggedIn === true) {
+    loggedInCount++;
+    loggedInUsers.push(user)
+  }
+  if (users[user].points >= 50) {
+    points++;
+    pointUsers.push(user)
+  }
+}
+
+console.log(`Number of logged-in users: ${loggedInCount} , (${loggedInUsers.join(', ')})`);
+console.log(`Number of users with points >= 50: ${points} , (${pointUsers.join(', ')})`);
+
+
+
+
+
+
+
+
+
+</script>
