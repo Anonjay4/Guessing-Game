@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+let arr = [1, 2, 3, 4, 5]
+let arr2 = ['shola', 'dave', 'tolu', 'micheal', 'dan']
+
+let mapFunc = arr.map(function (num, i, arr) {
+    console.log(num, i);
+    return `${num} * ${i} = ${num * i}`
+})
+
+let mapFunc2 = arr.forEach(function (num, i, arr) {
+    console.log(num, i);
+    return `${num} * ${i} = ${num * i}`
+})
+
+console.log(mapFunc);
+console.log(mapFunc2);
+
+let finder = arr2.find((name) => {
+    return  name === 'tolu'
+})
+
+if(finder){
+    console.log('Found her!!!');
+}
+
+console.log(finder);
+
+let finder2 = arr2.findIndex((name) => {
+    return name === 'dan'
+})
+
+console.log(finder2);
+
+let sum = 0
+arr.forEach((num) => {
+    sum = sum + num
+});
+
+
+console.log(sum);
+
+
+
+let arr3 = [{num:1}, {num:2},{num:'3'},{num:'4'}, {num: 5} ]
+let sum2 = arr.reduce((a, c) => a * c, 1)
+let sum3 = arr3.reduce((a ,c) => a + c.num, 0)
+
+console.log(sum2);
+console.log(sum3);
+
+
+let findSome = arr3.some((obj) => {
+    return obj.num === 5
+})
+
+console.log(findSome);
+// arr3.filter((obj) => {
+//     return  typeof obj .num === "string"
+// })
+
+let filteredObj = arr3.filter((obj) => typeof obj.num > 20)
+
+if(filteredObj.length === 0){
+    console.log('no one met the condition');
+}else{
+    console.log(`some met` + filteredObj.map((obj) => obj.num).toString(z));
+}
+console.log(filteredObj);
+
+</script>

@@ -89,6 +89,7 @@
         editInput.value = dataBase[i].todo
         forAdd.style.display = 'none'
         forEdit.style.display = 'block'
+        editInput.value = ''
     }
     // grabIndex(2)
     // grabIndex(5)
@@ -105,7 +106,7 @@
         forAdd.style.display = 'block'
         forEdit.style.display = 'none'
         console.log(dataBase);
-        editInput.value = ''
+        input.value = ''
     }
     function handleDelete(index) {
         dataBase.splice(index, 1)
