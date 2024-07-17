@@ -54,7 +54,8 @@
 <script>
     // "use strict"
     let index
-    let dataBase = []
+    let dataBase = JSON.parse(localStorage.getItem(`todos`)) || []
+
     // let count = 0
     function add() {
         if (input.value.trim() === '') {
@@ -67,6 +68,7 @@
             }
 
             dataBase.push(todoObj)
+            localStorage.setItem('todos', JSON.stringify(dataBase))
             display()
             console.log(dataBase);
 
@@ -75,14 +77,14 @@
 
     }
 
-    function display(params) {
+    function display() {
         tbody.innerHTML = ''
         for (let index = 0; index < dataBase.length; index++) {
             tbody.innerHTML += `<tr> <td>${index + 1}</td> <td> ${dataBase[index].todo} </td> <td> <button onclick="grabIndex(${index})"> edit </button> </td> 
                 <td> <button onclick="handleDelete(${index})"> delete </button> </td></tr>  `
         }
     }
-
+    display()
     function grabIndex(i) {
         index = i
         console.log(i);
@@ -91,9 +93,6 @@
         forEdit.style.display = 'block'
         editInput.value = ''
     }
-    // grabIndex(2)
-    // grabIndex(5)
-    // grabIndex(9)
 
 
 
@@ -102,6 +101,7 @@
             todo: editInput.value
         }
         dataBase.splice(index, 1, todoObj)
+        localStorage.setItem('todos', JSON.stringify(dataBase))
         display()
         forAdd.style.display = 'block'
         forEdit.style.display = 'none'
@@ -109,11 +109,41 @@
         input.value = ''
     }
     function handleDelete(index) {
-        dataBase.splice(index, 1)
-        display()
+        setTimeout(function () {
+            dataBase.splice(index, 1)
+            localStorage.setItem('todos', JSON.stringify(dataBase))
+            display()
+        }, 3000)
     }
 
+    // localStorage.setItem('todolist', 'ghana')
+    // letmyTOdo = localStorage.getItem('todolist')
+    // console.log(myTodo);
 
+    // localStorage.clear()
+    // localStorage.removeItem('todolist')
+
+
+
+    // setInterval(() => {
+
+    // }, interval)
+
+    
+
+
+    clearInterval(jumpInterval)
+
+    function interval(params) {
+        let count = 0
+        let jumpInterval = setInterval(function (params) {
+            count++
+            console.log("I'm Jumping");
+            if (count === 4) {
+                clearInterval(jumpInterval)
+            }
+        }, 3000)
+    }
 
 
 </script>
