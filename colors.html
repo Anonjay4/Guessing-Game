@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ranColor()">Generate Color</button>
+    <h1 style="color: rgb(7,59,249);" id="colors"></h1>
+</body>
+</html>
+<script>
+
+
+
+function ranColor() {
+    let ranNum1 = Math.floor(Math.random() * 256)
+    let ranNum2 = Math.floor(Math.random() * 256)
+    let ranNum3 = Math.floor(Math.random() * 256)
+    document.getElementById('colors').innerText = `RGB(${ranNum1},${ranNum2},${ranNum3})`
+} 
+
+
+function generateHexa() {
+    let hexa = ''
+    let arr = ['a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g' , 'h' , 'i' , 'j' , 'k' , 'l' , 'm' , 'n' , 'o' , 'p' , 'q' , 'r' , 's' , 't' , 'u' , 'v' , 'w' , 'x' , 'y' , 'z' ,  0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9]
+    // let picker = Math.floor(Math.random() * arr.length)
+
+    for (let index = 0; index < 6; index++) {
+        let picker = Math.floor(Math.random() * arr.length)
+        hexa += arr[picker]
+        
+    }
+
+    return`#${hexa}`
+}
+
+console.log(generateHexa());
+
+
+setInterval(() => {
+    document.body.style.backgroundColor = 
+}, 5000);
+
+</script>

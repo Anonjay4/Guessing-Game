@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input oninput="tryThis(event)" id="url" type="text" placeholder="URL Link">
+    <p id="show"></p>
+</body>
+</html>
+<script>
+
+
+let regex1 = /^https:\/\/[A-Za-z]+\.com[A-Za-z/]{0,}$/i;
+document.getElementById('show').style.color = 'red'
+
+function tryThis(e) {
+    let site = document.getElementById('url').value;
+    if (regex1.test(site)) {
+        document.getElementById('show').innerText = '';
+    } else {
+        document.getElementById('show').innerText = 'This is not a correct URL format';
+    }
+}
+
+
+
+
+
+</script>

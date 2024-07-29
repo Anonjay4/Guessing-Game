@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input oninput="filterItems(event)" id="searchItem" type="text">
+        <ul id="showItem"></ul>
+    </div>
+</body>
+</html>
+<script>
+
+
+let newArr = ['Spaghetti', 'Beans', 'Yam', 'Rice', 'Sardines', 'Cereals', 'Noodles', 'Chicken', 'Macaroni']
+let inputDisplay = document.getElementById('searchItem')
+document.getElementById('showItem').textContent = newArr
+
+function filterItems(e) {
+    console.log(e.target.value);
+    if (e.target.value === newArr) {
+        document.getElementById('showItem').innerHTML = newArr
+    }else{
+        document.getElementById('showItem').innerText = 'This Item Does not Exist'
+    }
+}
+
+
+
+
+
+
+</script>
